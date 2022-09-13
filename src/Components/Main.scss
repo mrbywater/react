@@ -1,0 +1,45 @@
+.main{	
+	width: 90%;   
+    margin: 0 auto;
+    padding-bottom: 70px;
+    min-height: calc(100vh - 220px);
+    overflow: auto;
+     display: flex;    
+    flex-wrap: wrap;     
+
+
+    .button-cont{        
+        margin-top: 50px;  
+        display: flex;
+        justify-content: space-around;  
+        flex-wrap: wrap;
+        flex : 33.33333%;
+
+
+        .main-button{     
+            width: 200px;
+            height: 200px;
+            border-radius: 5%;
+            box-sizing: border-box;
+            border: 2px #EC0000 solid;        
+            background-color: #FF962D;
+            text-align: center;
+            font-size: 23px;
+            color: white;
+            cursor: pointer;
+
+            &:hover{   
+                color: #EC0000; 
+                transform: scale(1.1);            
+            }
+
+            [class|="bg"]{
+                background-image: url('./img/css_sprites.png');
+                transform: scale(0.5);
+                margin: 0 auto -20px;
+                border-radius: 100%;
+                border: 3px #EC0000 solid;
+            }                      
+        }
+    }
+}

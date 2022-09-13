@@ -1,0 +1,51 @@
+.header {
+  height: 100px;
+  background-color: #FF962D;
+  display: flex;
+  justify-content: center; }
+  .header .logo {
+    position: absolute;
+    left: -15px; }
+    .header .logo [class|="bg"] {
+      background-image: url("D:/Projects/realtyparserapp/src/Components/img/css_sprites.png");
+      transform: scale(0.5);
+      margin: 0 auto 0;
+      border-radius: 100%; }
+    .header .logo:hover {
+      transform: rotate(180deg); }
+  .header .header-cont {
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+    text-align: center; }
+    .header .header-cont .header-button {
+      height: 93px;
+      width: 25%;
+      padding-top: 7px;
+      transition: .2s; }
+      .header .header-cont .header-button:hover {
+        background-color: #FF9F44; }
+      .header .header-cont .header-button:active, .header .header-cont .header-button:focus {
+        background-color: #FFA958; }
+      .header .header-cont .header-button [class|="bg"] {
+        background-image: url("D:/Projects/realtyparserapp/src/Components/img/css_sprites.png");
+        transform: scale(0.35);
+        margin: -25px auto -25px;
+        border-radius: 100%; }
+      .header .header-cont .header-button .header-link {
+        text-decoration: none;
+        font-size: 25px;
+        color: white;
+        padding-top: 10px; }
+        .header .header-cont .header-button .header-link span {
+          display: block;
+          padding-bottom: 14px; }
+
+/*.header{
+	height: 100px;
+    background-color: #FF962D;
+    display: flex;
+    justify-content: center;
+}*/
+
+/*# sourceMappingURL=Header.css.map */
