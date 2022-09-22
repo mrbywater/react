@@ -1,40 +1,40 @@
-import React, { useState, useEffect, getData} from 'react';
+import React, { useState, useEffect} from 'react';
 import './Main.css';
 import './Sprite.css';
-import { Category } from "./Category";;
+import { Category } from "./Category";
 
-const links1 = [
-{
-  img: 'bg-1',
-  title: 'Luffy',  
-},{
-  img: 'bg-2',
-  title: 'Zoro',  
-},{
-  img: 'bg-3',
-  title: 'Usop', 
-},
-{
-  img: 'bg-4',
-  title: 'Nami',  
-},{
-  img: 'bg-5',
-  title: 'Sanji',  
-},{
-  img: 'bg-6',
-  title: 'Chopper',   
-},
-{
-  img: 'bg-7',
-  title: 'Robin',  
-},{
-  img: 'bg-8',
-  title: 'Frenky',  
-},{
-  img: 'bg-9',
-  title: 'Brook',  
-},
-]
+// const links = [
+// {
+//   img: 'bg-1',
+//   title: 'Luffy',  
+// },{
+//   img: 'bg-2',
+//   title: 'Zoro',  
+// },{
+//   img: 'bg-3',
+//   title: 'Usop', 
+// },
+// {
+//   img: 'bg-4',
+//   title: 'Nami',  
+// },{
+//   img: 'bg-5',
+//   title: 'Sanji',  
+// },{
+//   img: 'bg-6',
+//   title: 'Chopper',   
+// },
+// {
+//   img: 'bg-7',
+//   title: 'Robin',  
+// },{
+//   img: 'bg-8',
+//   title: 'Frenky',  
+// },{
+//   img: 'bg-9',
+//   title: 'Brook',  
+// },
+// ]
 
 const Main = () =>{
 
@@ -47,36 +47,25 @@ const [isLoading, setIsLoading]	= useState(true)
    	 .then(res => res.json())
    	 .then(data => {  
    	  const links = JSON.parse(data)	
-    	setLinks(links)
-    	console.log(links)
+    	setLinks(links)    	
     	setIsLoading(false)
-    })
+    	console.log(links)
+    })   	 
   }
 
-	 useEffect( () => {
+	useEffect( () => {
 	 	getData()
 	 }, [])	
-	
-  return (
-  	<div class="main">
-		{links1.map(link =>(
-		<div class="button-cont">
-			<div class="main-button">
-	  			<div class={link.img}></div>
-	  			<span>{!isLoading ? Object.keys(links).map(key =>(<Category key={key} title={key} arr={links[key]} />)) : <div>Loading...</div>}</span>	  			
-	  		</div>
-	  	</div>
-	  ))}
+
+	return (
+  	<div className="main">
+			{!isLoading ? Object.keys(links).map(key => (	
+	  							<Category key={key} title={key} />  	
+	  							)
+				) : <div>Loading...</div>
+			}
 	</div>				  
 	)
 }
 
 export { Main }
-
-// <div class="button-cont">
-//         <div class="main-button">
-//           {links1.map(link => 
-//           	<div class={link.img}></div>)}  
-// 					{!isLoading ? Object.keys(links).map(key =>(<Category key={key} title={key} arr={links[key]} />)) : <div>Loading...</div>}
-// 				</div>			
-// 		</div>

@@ -7,7 +7,7 @@
     position: absolute;
     left: -15px; }
     .header .logo [class|="bg"] {
-      background-image: url("D:/Projects/realtyparserapp/src/Components/img/css_sprites.png");
+      background-image: url("./img/css_sprites.png");
       transform: scale(0.5);
       margin: 0 auto 0;
       border-radius: 100%; }
@@ -15,12 +15,12 @@
       transform: rotate(180deg); }
   .header .header-cont {
     display: flex;
-    width: 90%;
+    width: 30%;
     justify-content: space-around;
     text-align: center; }
     .header .header-cont .header-button {
       height: 93px;
-      width: 25%;
+      width: 30%;
       padding-top: 7px;
       transition: .2s; }
       .header .header-cont .header-button:hover {
@@ -28,7 +28,7 @@
       .header .header-cont .header-button:active, .header .header-cont .header-button:focus {
         background-color: #FFA958; }
       .header .header-cont .header-button [class|="bg"] {
-        background-image: url("D:/Projects/realtyparserapp/src/Components/img/css_sprites.png");
+        background-image: url("./img/css_sprites.png");
         transform: scale(0.35);
         margin: -25px auto -25px;
         border-radius: 100%; }
