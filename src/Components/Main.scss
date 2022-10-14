@@ -16,6 +16,8 @@
         flex : 33.33333%;
 
 
+        
+
         .main-button{     
             width: 200px;
             height: 200px;
@@ -41,5 +43,12 @@
                 border: 3px #EC0000 solid;
             }                      
         }
+
+        .fontStyles{
+            font-size: 16px;
+            overflow: hidden;
+            line-height: 2;
+        }
+
     }
 }

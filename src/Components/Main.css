@@ -32,5 +32,9 @@
         margin: 0 auto -20px;
         border-radius: 100%;
         border: 3px #EC0000 solid; }
+    .main .button-cont .fontStyles {
+      font-size: 16px;
+      overflow: hidden;
+      line-height: 2; }
 
 /*# sourceMappingURL=Main.css.map */
